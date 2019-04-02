@@ -364,6 +364,21 @@ background-position: 90% 8%
 - Check out more in-depth tutorial [here](https://slides.yihui.name/xaringan/#1)
 
 ---
+
+# HTML Widgets - UC Map
+
+```{r out.width='100%', fig.height=6, eval=require('leaflet')}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(lat = -43.5236, lng = 172.5818, zoom = 15)
+```
+
+---
+
+# HTML links - YouTube
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/8lXdyD2Yzls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
 class: title-slide-final, middle
 background-image: url("images/NZILBB.png")
 background-size: 300px

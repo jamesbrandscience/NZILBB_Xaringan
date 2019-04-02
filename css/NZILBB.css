@@ -1,7 +1,7 @@
 /*
-CSS for xaringan slides in RU flavor
-Author: Joseph V. Casillas
-Updated: 03/06/2018
+CSS for xaringan slides in NZILBB flavor
+Modified from: RU theme by Joseph V. Casillas
+Updated: 02/05/19
 */
 
 /* Package defaults that we slightly tweak */
@@ -107,7 +107,7 @@ thead, tfoot, tr:nth-child(even) { background: none; }
 }
 
 /*~~~~~~~~~~~~~~*/
-/* RU additions */
+/* NZILBB additions */
 /*~~~~~~~~~~~~~~*/
 
 /* Title slide */
@@ -221,7 +221,7 @@ thead, tfoot, tr:nth-child(even) { background: none; }
 
 /* Color adjustments for text */
 
-/* Make bold syntax compile to RU-red */
+/* Make bold syntax compile to NZILBB-red */
 strong {
   color: #9DA756;
 }
