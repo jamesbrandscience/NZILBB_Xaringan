@@ -6,7 +6,5 @@ Minimalist xaringan theme for html presentations using NZILBB style/colors
 
 ## Example
 
-![Title slide](./img/ex/rutgers_showcase.gif)
-
-Example presentation [here](http://www.jvcasillas.com/ru_xaringan/slides/index.html). 
+Example presentation [here](https://jamesbrandscience.github.io/NZILBB_Xaringan/#1). 
 
