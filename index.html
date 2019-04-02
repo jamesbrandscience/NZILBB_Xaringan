@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>A very long name for a title and it might go over more than one line using Xaringan</title>
+    <meta charset="utf-8" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="css/NZILBB.css" type="text/css" />
+    <link rel="stylesheet" href="css/rutgers-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# A very long name for a title and it might go over more than one line using Xaringan
+## Your name
+### A conference, University of Canterbury </br> 2019-04-02
+
+---
+
+
+
+
+# Modified from Joseph Casillas' RU theme
+
+You can see the original at:
+
+&lt;a href="http://www.jvcasillas.com/ru_xaringan/slides/index.html"&gt;.NZILBBgreen[&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;] jvcasillas.com/ru_xaringan/slides
+
+---
+
+# IPA symbols work in unicode
+
+## /ʃæ.'riŋ.ɡæn/
+
+### /θðszʃʒʂʐçʝʎʟɘɵəɜ/  
+
+#### e̪a̺u̯
+
+|     Word    | Phonological transcription | Phonetic transcription |
+| :---------- | -------------------------- | ---------------------- |
+| casa        | /ˈka.sa/                   | [ˈka.sa]               |
+| taco (Sp.)  | /ˈta.ko/                   | [ˈta.ko]               |
+| taco (Eng.) | /ˈta.ko/                   | [ˈt&lt;sup&gt;h&lt;/sup&gt;a.ko]   |
+
+
+---
+
+# Standard slide with R code
+
+
+```r
+library(tidyverse)
+ggplot(cars, aes(x = dist, y = speed)) + 
+  geom_point() + 
+* geom_smooth(method = 'lm', formula = y ~ poly(x, 2)) # we can highlight lines of code 
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.png" width="864" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Slide basics
+
+- Unordered lists
+  - can be created using "-"
+  - and they can be nested using 2 or 4 spaces
+- We can also make `blockquotes`
+  - we can use `&lt;ru-blockquote&gt;text&lt;/ru-blockquote&gt;` 
+  - or `&gt;`
+
+&lt;ru-blockquote&gt;This is a blocked quote&lt;/ru-blockquote&gt;
+
+- Footnotes&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[
+[1] Information here.
+]
+
+---
+
+# More basics
+
+### Ordered list
+
+1. one
+2. two 
+3. three
+
+--
+
+- Spaced
+
+--
+
+- List
+
+--
+
+- with increments
+
+--
+
+An incremental 
+--
+sentence with 
+--
+separation.
+
+---
+background-image: url(images/uc-future-students-black.png)
+background-position: 90% 50%
+background-size: 400pt
+
+# Another example
+
+### Lists to the left
+
+- We can place images
+- anywhere on the screen
+- by using **background-image**
+- in conjunction with 
+- **background-position**
+
+### Image to the right
+
+- This can replicate my 'float right' hack
+- We can control the 
+- size of the image
+- by using the 
+- **background-size** option
+- note this removes the NZILBB logo
+
+---
+class: center, middle
+
+# Text adjustments
+
+--
+
+It is also possible to change the .blue[color] of any  
+text by using... 
+
+--
+
+    .color[text here]
+
+--
+
+For example
+
+--
+
+    .grey[grey]
+
+--
+
+will make text .grey[grey]
+
+--
+
+We can do this with white, .grey[grey], .black[black], .NZILBBgreen[green] and .blue[blue]. 
+
+--
+
+To really make text stand out we can just use \*\*text\*\* like **this**.
+
+---
+
+# Two columns!
+
+.pull-left[
+
+### Some things on the left
+
+1. List of things
+
+1. Plain Markdown;
+
+1. blah blah
+
+1. Plain Markdown;
+
+]
+
+--
+
+.pull-right[
+
+### and other things on the right
+
+1. We do this by using the 
+
+1. \.pull-left[] and \.pull-right[]
+
+1. commands. Just put any text inside the 
+
+1. brackets and you're good to go
+
+]
+
+---
+
+# R code and highlighting (I never use this)
+
+.pull-left[
+An example using a leading `*`:
+
+    ```r
+    if (TRUE) {
+    ** message("Very important!")
+    }
+    ```
+Output:
+```r
+if (TRUE) {
+* message("Very important!")
+}
+```
+
+This is invalid R code, so it is a plain fenced code block that is not executed.
+]
+
+.pull-right[
+An example using `{{}}`:
+
+    ```{r tidy=FALSE}
+    if (TRUE) {
+    *{{ message("Very important!") }}
+    }
+    ```
+Output:
+
+```r
+if (TRUE) {
+* message("Very important!") 
+}
+```
+
+```
+## Very important!
+```
+
+It is valid R code so you can run it.
+]
+
+---
+class: middle, bottom
+background-image: url("images/uc-future-students-black.png")
+background-size: contain
+
+### &lt;grey&gt;You can&lt;/grey&gt;  
+### &lt;grey&gt;fill the&lt;/grey&gt;  
+### &lt;grey&gt;screen with &lt;/grey&gt;  
+### **background-size: contain**
+
+---
+
+# Macros
+
+- We can insert javascript macros into our presentations
+- For example, if we put the following code into `macros.js`...
+
+```js
+remark.macros.scale = function (percentage) {
+  var url = this;
+  return '&lt;img src="' + url + '" style="width: ' + percentage + '" /&gt;';
+};
+```
+
+- ...we can use the markdown call to resize images...
+
+```md
+![:scale 25%](/images/uc-future-students-black.png)
+```
+
+- These calls can also be put inside html divs so as to control where they appear. 
+
+&lt;div align="center"&gt;
+![:scale 10%](images/uc-future-students-black.png)
+&lt;/div&gt;
+
+- All we need to do is include `beforeInit: "macros.js"` under nature in our YAML front matter
+
+---
+
+# RU stuff
+
+### General
+
+- The theme was designed to work with a 16:9 aspect ratio
+- Set the aspect ratio under the **nature** output parameter...  
+    nature:  
+      &amp;nbsp; &amp;nbsp; ratio: "16:9"
+
+
+### Sections
+
+- We can create section dividers with NZILBB green and grey by using the `class` call:
+
+```md
+class: title-slide-section-green
+```
+
+or 
+
+```md
+class: title-slide-section-grey
+```
+
+---
+class: title-slide-section-green
+
+# RU red section divider
+
+### This is the H3 font color
+
+- Our text goes here
+
+- We can use **bold**
+
+- and .blue[blue]
+
+- and also .grey[grey]
+
+---
+class: title-slide-section-grey
+
+# RU grey section divider
+
+### This is the H3 font color
+
+- Our text goes here
+
+- We can use **bold**
+
+- and .blue[blue]
+
+- and also .black[black]
+
+---
+
+# Tables
+
+### Centering
+
+- Tables are centered by default in **xaringan**. 
+- We can override this using...
+
+    .pull-left[], .pull-right[], etc. 
+
+
+.pull-right[
+
+|  This |  is |   a    |    Table     |
+| :---- | :-- | :----- | :----------: |
+| It is | now | pulled | to the right |
+| 12    | 34  | 56     |      78      |
+
+]
+
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-size: 100px
+background-position: 90% 8%
+
+# xaringan
+
+- Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
+
+- You can see all the goodies like this.
+
+- Check out more in-depth tutorial [here](https://slides.yihui.name/xaringan/#1)
+
+---
+class: title-slide-final, middle
+background-image: url("images/NZILBB.png")
+background-size: 300px
+background-position: 98% 2%
+
+# Thanks!
+
+## This is the final slide
+
+### you can add your email, twitter, github, etc. info here. &lt;/br&gt; Click on a logo link.
+
+Here is an example:  
+
+|                                                                                                            |                                   |
+| :--------------------------------------------------------------------------------------------------------- | :-------------------------------- |
+| &lt;a href="mailto:joseph.casillas@rutgers.edu"&gt;.NZILBBgreen[&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;]               | joseph.casillas@rutgers.edu       |
+| &lt;a href="http://www.jvcasillas.com/ru_xaringan/slides/index.html"&gt;.NZILBBgreen[&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;] | jvcasillas.com/ru_xaringan/slides |
+| &lt;a href="http://twitter.com/jvcasill"&gt;.NZILBBgreen[&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;]                          | @jvcasill                         |
+| &lt;a href="http://github.com/jvcasillas"&gt;.NZILBBgreen[&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;]                          | @jvcasillas                       |
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="js/ru_xaringan.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
