@@ -99,7 +99,9 @@ ggplot(cars, aes(x = dist, y = speed)) +
 
 An incremental 
 --
+
 sentence with 
+
 --
 separation.
 
@@ -267,7 +269,7 @@ remark.macros.scale = function (percentage) {
 
 - These calls can also be put inside html divs so as to control where they appear. 
 
-<div align="center">
+<div align="right">
 ![:scale 10%](images/uc-future-students-black.png)
 </div>
 
